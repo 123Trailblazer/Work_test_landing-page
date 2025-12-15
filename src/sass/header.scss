@@ -3,35 +3,38 @@
 
 header {
     display: flex;
-    min-height: 80px;
+    align-items: center;
+    min-height: 100px;
     width: 100%;
     background-color: #363f32;
-
+    
     .logo {
         margin-top: 10px;
         margin-right: 38px;
     }
-
+    
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 1430px;
-
-        .menu {
+        
+        .navbar__menu {
+            display: flex;
+            justify-content: space-between;
             width: 60%;
-
-
+            
+            
             ul {
                 display: flex;
                 justify-content: flex-start;
             }
-
+            
             li {
                 list-style-type: none;
             }
-
+            
             a {
                 display: block;
                 text-decoration: none;
@@ -41,40 +44,38 @@ header {
                 text-align: center;
                 margin-right: 42px;
             }
-
+            
             a:hover {
                 color: #C3C3C3;
             }
         }
-
-        .navbar__right {
+        
+        .navbar__actions {
             display: flex;
             justify-content: flex-end;
             width: 40%;
-
-            .button {
-                a {
-                    display: block;
-                    padding: 17px 42.5px;
-                    text-decoration: none;
-                    border: 0.5px solid rgba(196, 196, 196, 0.5);
-                    border-radius: variables.$border-radius;
-                    margin-right: 12px;
-                    text-decoration: none;
-                    color: variables.$white;
-                }
-
+            
+            .navbar__account {
+                
+                display: block;
+                padding: 17px 42.5px;
+                text-decoration: none;
+                border: 0.5px solid rgba(196, 196, 196, 0.5);
+                border-radius: variables.$border-radius;
+                margin-right: 12px;
+                text-decoration: none;
+                color: variables.$white;
+                
+                
                 a:hover {
                     color: #C3C3C3;
                 }
             }
-        }
-
-        .search {
-            margin-right: 14px;
-
-            a {
+            
+            .navbar__search {
+                
                 display: block;
+                margin-right: 14px;
                 align-items: center;
                 padding: 15px 15px;
                 background-color: #5A5E68;
@@ -83,36 +84,34 @@ header {
                 border-top-right-radius: variables.$border-radius;
                 border-bottom-right-radius: variables.$border-radius;
             }
+            
+        }      
+        
+        .navbar__cart {
+            
+            display: block;
+            align-items: center;
+            padding: 17px 19px 14px 16px;
+            background-color: #E63150;
+            border-top-left-radius: variables.$border-radius;
+            border-bottom-left-radius: variables.$border-radius;
+            
         }
-
-        .box {
-            display: flex;
-
-            .left__box {
-                a {
-                    display: block;
-                    align-items: center;
-                    padding: 17px 19px 14px 16px;
-                    background-color: #E63150;
-                    border-top-left-radius: variables.$border-radius;
-                    border-bottom-left-radius: variables.$border-radius;
-                }
-            }
-
-            .right__box {
-                a {
-                    display: block;
-                    align-items: center;
-                    text-align: center;
-                    padding: 16px 15px 22px 16px;
-                    background-color: #B53248;
-                    border-top-right-radius: variables.$border-radius;
-                    border-bottom-right-radius: variables.$border-radius;
-                    text-decoration: none;
-                    color: variables.$white;
-                    font-size: 16px;
-                }
-            }
+        
+        .navbar__cart-count {
+            
+            display: block;
+            align-items: center;
+            text-align: center;
+            padding: 16px 15px 22.5px 16px;
+            background-color: #B53248;
+            border-top-right-radius: variables.$border-radius;
+            border-bottom-right-radius: variables.$border-radius;
+            text-decoration: none;
+            color: variables.$white;
+            font-size: 16px;
+            
         }
+        
     }
 }
