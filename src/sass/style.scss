@@ -1,6 +1,23 @@
 @use 'normalize.css';
 @use 'variables';
-@use 'header';
 @use 'container';
+@use 'header';
+@use 'slider';
+@use 'content';
+@use 'footer';
 
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Gotham Pro";
+}
