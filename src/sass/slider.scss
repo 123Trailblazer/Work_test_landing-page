@@ -20,13 +20,15 @@
     min-width: 100%;
     position: relative; /* Контейнер для абсолютного позиционирования */
     overflow: hidden;
-}
+    height: 638px;
+    }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;  // не шире контейнера
+    height: auto;     // автоматическая высота
     display: block;
     object-fit: cover; /* Сохраняет пропорции */
+    
 }
 
 /* Затемнённый фон под текстом */
@@ -66,7 +68,7 @@
 .slide-overlay {
     display: inline-block;
     align-items: center;
-margin-top: 180px;
+    margin-top: 180px;
     color: white;
     text-decoration: none;
     border-radius: 20px;
