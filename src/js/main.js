@@ -1,30 +1,20 @@
 import '../sass/style.scss';
+import Swiper from 'swiper/bundle';
+import 'swiper/swiper-bundle.css';
 
+var swiper = new Swiper(".mySwiper", 
+  {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
 
-document.addEventListener('DOMContentLoaded', function() {
-  const carousel = document.querySelector('.carousel');
-  const slides = document.querySelector('.carousel-slides');
-  const prevBtn = document.querySelector('.carousel-prev');
-  const nextBtn = document.querySelector('.carousel-next');
+      speed: 800,
 
-  const slideCount = document.querySelectorAll('.carousel-slide').length;
-  let currentIndex = 0;
+      loop: true,
 
-  // Функция переключения слайда
-  function goToSlide(index) {
-    if (index < 0) index = slideCount - 1;
-    if (index >= slideCount) index = 0;
-    currentIndex = index;
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      autoplay: {
+    delay: 3000, // 3 секунды между слайдами
+    disableOnInteraction: false, // продолжать после взаимодействия пользователя
   }
-
-  // Обработчики кнопок
-  prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-  nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-
-  // Автопрокрутка (опционально)
-  setInterval(() => goToSlide(currentIndex + 1), 5000);
-
-  // Старт
-  goToSlide(0);
-});
+    });

@@ -24,3 +24,17 @@ export default defineConfig({
     },
   },
 });
+
+
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // Дополнительные опции для Sass
+        api: 'modern-compiler', // или 'legacy'
+      },
+    },
+  },
+});
