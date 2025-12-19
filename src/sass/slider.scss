@@ -5,10 +5,30 @@
     border-radius: 10px;
 }
 
+.swiper-slide {
+    position: relative; /* создаём контекст позиционирования */
+    overflow: hidden; /* скрываем выходящие за границы элементы */
+}
+
 .swiper-slide img {
     min-width: 100%;  // не шире контейнера
     display: block;
     object-fit: cover ; /* Сохраняет пропорции */
     height: 638px;
+    position: relative;
 }
 
+.swiper-slide__desk {
+    position: absolute;
+    bottom: 150px; /* прижать к нижнему краю */
+    left: 50px;
+    right: 0;
+    padding: 20px;
+    color: #fff; /* белый текст */
+    z-index: 10; /* выше изображения */
+}
+
+.swiper-slide__desk a {
+        text-decoration: none;
+        color: variables.$white;
+    }
