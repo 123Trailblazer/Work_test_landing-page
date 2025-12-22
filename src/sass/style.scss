@@ -2,6 +2,7 @@
 @use 'variables';
 @use 'container';
 @use 'header';
+@use 'main';
 @use 'slider';
 @use 'content';
 @use 'footer';
@@ -19,5 +20,27 @@ body {
 }
 
 body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Gotham Pro";
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 1920px;
+    flex: 1 0 auto; /* Занимает оставшееся пространство */
+    display: flex;
+    flex-direction: column;
+    
+    .content {
+        flex: 1; /* Растягивает контент, выталкивая футер вниз */
+    }
+}
+
+footer {
+    margin-top: auto; /* Ключевое свойство — прижимает футер к низу */
+}
+
+

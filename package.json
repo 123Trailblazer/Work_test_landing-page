@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "css-grid": "^1.0.7",
     "sass": "^1.94.2",
     "vite": "^7.2.4"
   },
