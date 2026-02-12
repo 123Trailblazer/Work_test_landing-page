@@ -18,3 +18,9 @@ var swiper = new Swiper(".mySwiper",
       disableOnInteraction: false, // продолжать после взаимодействия пользователя
     }
   });
+
+
+  let a = 5;
+  let number = a;
+  
+  console.log(number);
