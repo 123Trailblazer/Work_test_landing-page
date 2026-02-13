@@ -1,3 +1,23 @@
 @use 'variables';
 
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #252525;
+    padding: 2rem;
+}
+
+header nav {
+    min-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+
+header .nav-header {
+
+    
+}
