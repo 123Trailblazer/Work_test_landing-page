@@ -1,26 +1,10 @@
 import '../sass/style.scss';
-import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
-
-var swiper = new Swiper(".mySwiper", 
-  {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    
-    speed: 800,
-    
-    loop: true,
-    
-    autoplay: {
-      delay: 3000, // 3 секунды между слайдами
-      disableOnInteraction: false, // продолжать после взаимодействия пользователя
-    }
-  });
 
 
-  let a = 5;
-  let number = a;
-  
-  console.log(number);
+let navToggle = document.querySelector('.nav-btn');
+let navBar = document.querySelector('.navbar');
+
+navToggle.addEventListener('click', function() {
+  navBar.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});

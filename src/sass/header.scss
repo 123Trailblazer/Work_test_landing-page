@@ -2,22 +2,113 @@
 
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
+    
     width: 100%;
     background-color: #252525;
-    padding: 2rem;
+    padding: 1rem; /* Уменьшено для компактности на мобильных */
 }
 
 header nav {
-    min-width: 1200px;
+    /* Убрано min-width: 1200px */
     margin: 0 auto;
-    
+    max-width: 1200px; /* Ограничение по максимуму */
+    padding: 0 1rem;
 }
-
 
 header .nav-header {
-
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+header .nav-header .logo {
+    font-size: 2rem; /* Уменьшено для мобильных */
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+header .nav-header .logo:hover{
+    color: dodgerblue;
+}
+
+header .nav-header .nav-btn {
+    background: none;
+    color: #fff;
+    font-size: 1.5em; /* Уменьшено */
+    cursor: pointer;
+    border: none; /* Убрано лишнее */
+}
+
+header .nav-header .nav-btn:hover{
+    color: dodgerblue;
+}
+
+header .nav-header .nav-btn .close-menu {
+    display: none;
+}
+
+header .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+/* Мобильные устройства: меню скрыто по умолчанию */
+header .navbar {
+    height: 0;
+}
+
+.navbar.active {
+    height: auto; /* Вместо фиксированного значения */
+}
+
+header .navbar .nav-link {
+    font-size: 1.2em; /* Уменьшено */
+    color: #fff;
+    padding: 0.75rem 0;
+    display: block; /* Вертикальное меню на мобильных */
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease-in;
+}
+
+header .navbar .nav-link:hover {
+    color: dodgerblue;
+}
+
+
+header .nav-header .nav-btn.active .open-menu {
+    display: none;
+}
+
+header .nav-header .nav-btn.active .close-menu {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header .navbar {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem; /* Расстояние между пунктами */
+        height: auto !important; /* Переопределяем высоту */
+    }
+    
+    header .nav-btn {
+        display: none; /* Скрываем кнопку на десктопах */
+    }
+    
+    header .navbar .nav-link {
+        display: inline-block; /* Горизонтальное меню */
+        padding: 1rem 1.0rem;
+    }
+}
+
